@@ -233,3 +233,12 @@ addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40),{passi
   }
   enter && enter.addEventListener('click',go);
 })();
+
+/* ░ splash: pick portrait (mobile) vs landscape (desktop) video ░ */
+(function(){
+  const v=document.getElementById('splashVid'); if(!v) return;
+  const pick=()=> (window.matchMedia('(min-width:768px)').matches ? v.dataset.desktop : v.dataset.mobile);
+  const want=pick();
+  if(want && v.getAttribute('src')!==want){ v.setAttribute('src',want); v.load();
+    const p=v.play&&v.play(); if(p&&p.catch)p.catch(()=>{}); }
+})();

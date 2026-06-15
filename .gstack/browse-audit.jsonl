@@ -112,3 +112,9 @@
 {"ts":"2026-06-15T11:13:25.577Z","cmd":"viewport","args":"1440x900","origin":"http://localhost:8753/","durationMs":4,"status":"ok","hasCookies":false,"mode":"launched"}
 {"ts":"2026-06-15T11:13:25.627Z","cmd":"goto","args":"http://localhost:8753/","origin":"http://localhost:8753/","durationMs":10,"status":"ok","hasCookies":false,"mode":"launched"}
 {"ts":"2026-06-15T11:13:27.896Z","cmd":"screenshot","args":"--viewport /tmp/elx_video_d.png","origin":"http://localhost:8753/","durationMs":223,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-15T11:15:33.868Z","cmd":"viewport","args":"1440x900","origin":"http://localhost:8753/","durationMs":1,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-15T11:15:33.939Z","cmd":"goto","args":"http://localhost:8753/","origin":"http://localhost:8753/","durationMs":31,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-15T11:15:35.188Z","cmd":"js","args":"var v=document.getElementById('splashVid'); (v.currentSrc||'').split('/').pop()+' '+v.videoWidth+'x'+v.videoHeight+' paused='+v.paused","origin":"http://localhost:8753/","durationMs":1,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-15T11:15:35.229Z","cmd":"viewport","args":"390x844","origin":"http://localhost:8753/","durationMs":4,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-15T11:15:35.298Z","cmd":"goto","args":"http://localhost:8753/","origin":"http://localhost:8753/","durationMs":29,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-15T11:15:36.541Z","cmd":"js","args":"var v=document.getElementById('splashVid'); (v.currentSrc||'').split('/').pop()+' '+v.videoWidth+'x'+v.videoHeight+' paused='+v.paused","origin":"http://localhost:8753/","durationMs":0,"status":"ok","hasCookies":false,"mode":"launched"}
