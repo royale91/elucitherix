@@ -17,7 +17,7 @@ const PRODUCTS = [
     sizes:['28','30','32','34','36'],
     desc:'Relaxed architectural fit. Pressed-crease WAX shorts with a dropped, sculptural break. Brutalist tailoring, head-to-toe ready.' },
   { id:'tank-top', name:'WAX Tank Top', cat:'tops', price:745,
-    img:'assets/cutouts/tank-top.png?v=2',
+    img:'assets/cutouts/tank-top.png?v=3',
     sizes:['XS','S','M','L','XL'],
     desc:'High-gloss leather-like WAX tank with subtle debossed LOVE branding and precision double-needle stitching. Rick Owens avant-garde line.' },
   { id:'gloves', name:'WAX Gloves', cat:'accessories', price:690,

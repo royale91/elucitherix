@@ -124,3 +124,8 @@
 {"ts":"2026-06-15T11:23:35.422Z","cmd":"click","args":"#enterShop","origin":"https://royale91.github.io/elucitherix/","durationMs":1935,"status":"ok","hasCookies":false,"mode":"launched"}
 {"ts":"2026-06-15T11:23:36.677Z","cmd":"js","args":"window.scrollTo(0,560)","origin":"https://royale91.github.io/elucitherix/","durationMs":0,"status":"ok","hasCookies":false,"mode":"launched"}
 {"ts":"2026-06-15T11:23:37.216Z","cmd":"screenshot","args":"--viewport /tmp/elx_live_desktop.png","origin":"https://royale91.github.io/elucitherix/","durationMs":89,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-15T11:29:00.380Z","cmd":"viewport","args":"1440x900","origin":"https://royale91.github.io/elucitherix/","durationMs":4,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-15T11:29:00.950Z","cmd":"goto","args":"http://localhost:8753/","origin":"http://localhost:8753/","durationMs":534,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-15T11:29:03.515Z","cmd":"click","args":"#enterShop","origin":"http://localhost:8753/","durationMs":2114,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-15T11:29:04.577Z","cmd":"js","args":"var c=[...document.querySelectorAll('.card')].find(x=>x.dataset.id==='boot-pants'); var img=c.querySelector('img'); var cr=c.querySelector('.card__media').getBoundingClientRect(), ir=img.getBoundingCl…","origin":"http://localhost:8753/","durationMs":2,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-15T11:29:04.702Z","cmd":"screenshot","args":"[data-id=boot-pants] /tmp/elx_bootpants_card.png","origin":"http://localhost:8753/","durationMs":87,"status":"ok","hasCookies":false,"mode":"launched"}
