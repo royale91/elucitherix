@@ -48,6 +48,14 @@ const PRODUCTS = [
     img:'assets/cutouts/boots.png?v=1',
     sizes:['39','40','41','42','43','44','45'],
     desc:'Padded high-gloss WAX boots with debossed LOVE cuff and a heavy lugged sole. Sculptural rounded toe — the foundation of the head-to-toe WAX walk.' },
+  { id:'hoodie', name:'WAX Zip Hoodie', cat:'outerwear', price:1340,
+    img:'assets/cutouts/hoodie.png?v=1',
+    sizes:['XS','S','M','L','XL'],
+    desc:'Oversized full-zip hoodie in high-gloss WAX. Lined hood, kangaroo pockets, ribbed cuffs and hem. Heavyweight brutalist drape — everyday armour for the house.' },
+  { id:'scarf', name:'WAX Heart Headscarf', cat:'accessories', price:720,
+    img:'assets/cutouts/scarf.png?v=1',
+    sizes:['OS'],
+    desc:'Triangular WAX headscarf with an all-over tonal embossed heart motif and knotted tails. Tied babushka-style — the softest expression of the chrome-heart DNA.' },
 ];
 
 const money = n => '$' + n.toLocaleString('en-US');
