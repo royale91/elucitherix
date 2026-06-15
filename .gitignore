@@ -1,0 +1,5 @@
+.venv/
+assets/raw/
+assets/_contact_sheet.jpg
+__pycache__/
+.DS_Store

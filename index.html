@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ELUCITHERIX — WAX</title>
+<meta name="description" content="ELUCITHERIX — avant-garde luxury built on WAX. Exclusive material. Head-to-toe." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@100;200;300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 27C8 21 3 16 3 10.5 3 6.9 5.9 4 9.5 4c2.3 0 4.4 1.2 5.6 3 1.2-1.8 3.3-3 5.6-3C24.1 4 27 6.9 27 10.5 27 16 24 21 16 27z' fill='none' stroke='%23cfcfcf' stroke-width='1.6'/%3E%3C/svg%3E" />
+</head>
+<body>
+
+<!-- grain + vignette atmosphere -->
+<div class="grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+
+<!-- ░░ HEADER ░░ -->
+<header class="nav" id="nav">
+  <div class="nav__l">
+    <button class="nav__menu" aria-label="Index">INDEX</button>
+  </div>
+  <a href="#top" class="wordmark" aria-label="Elucitherix">
+    <svg class="heart" viewBox="0 0 32 32" aria-hidden="true">
+      <defs>
+        <linearGradient id="chrome" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#ffffff"/>
+          <stop offset=".45" stop-color="#9a9a9a"/>
+          <stop offset=".5" stop-color="#5a5a5a"/>
+          <stop offset=".55" stop-color="#bdbdbd"/>
+          <stop offset="1" stop-color="#3a3a3a"/>
+        </linearGradient>
+      </defs>
+      <path d="M16 28.5C7 22 1.6 16.4 1.6 10.2 1.6 6.1 4.9 2.8 9 2.8c2.8 0 5.2 1.5 6.6 3.7l.4.6.4-.6c1.4-2.2 3.8-3.7 6.6-3.7 4.1 0 7.4 3.3 7.4 7.4 0 6.2-5.4 11.8-14.4 18.3z"
+        fill="url(#chrome)" stroke="#e8e8e8" stroke-width=".5"/>
+      <path d="M3.5 8.2C5 4.3 9.5 3 13 5.2M28.5 8.2C27 4.3 22.5 3 19 5.2" fill="none" stroke="#dcdcdc" stroke-width=".7" stroke-linecap="round" opacity=".8"/>
+    </svg>
+    <span>ELUCITHERIX</span>
+  </a>
+  <div class="nav__r">
+    <button class="cart-btn" id="cartBtn">CART<span class="cart-ct" id="cartCt">(0)</span></button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ░░ MARQUEE ░░ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>EXCLUSIVE WAX MATERIAL</span><i>♡</i><span>NO ONE ELSE HAS ACCESS</span><i>♡</i><span>HOFTEN STUDIOS</span><i>♡</i><span>HEAD&nbsp;TO&nbsp;TOE</span><i>♡</i>
+      <span>EXCLUSIVE WAX MATERIAL</span><i>♡</i><span>NO ONE ELSE HAS ACCESS</span><i>♡</i><span>HOFTEN STUDIOS</span><i>♡</i><span>HEAD&nbsp;TO&nbsp;TOE</span><i>♡</i>
+    </div>
+  </div>
+
+  <!-- ░░ INTRO ░░ -->
+  <section class="intro">
+    <p class="intro__eyebrow">COLLECTION 001 — WAX</p>
+    <h1 class="intro__h">
+      <span>A FASHION HOUSE</span>
+      <span>BUILT ON A MATERIAL</span>
+      <span>NO ONE ELSE <em>CAN TOUCH.</em></span>
+    </h1>
+    <p class="intro__sub">Proprietary high-gloss WAX. Brutalist silhouettes. Debossed <em>LOVE</em>. Worn head-to-toe.</p>
+    <a href="#shop" class="intro__cta">ENTER THE COLLECTION →</a>
+  </section>
+
+  <!-- ░░ SHOP / DIRECTORY ░░ -->
+  <section class="shop" id="shop">
+    <div class="shop__head">
+      <h2>THE COLLECTION</h2>
+      <div class="shop__filter" id="filter">
+        <button data-cat="all" class="is-on">ALL</button>
+        <button data-cat="outerwear">OUTERWEAR</button>
+        <button data-cat="bottoms">BOTTOMS</button>
+        <button data-cat="tops">TOPS</button>
+        <button data-cat="accessories">ACCESSORIES</button>
+      </div>
+    </div>
+    <div class="grid" id="grid"><!-- products injected --></div>
+  </section>
+
+  <!-- ░░ EDITORIAL ░░ -->
+  <section class="editorial">
+    <div class="editorial__txt">
+      <p class="editorial__k">THE FACE</p>
+      <h3>NLE CHOPPA<br/>×<br/>ELUCITHERIX</h3>
+      <p>The full WAX collection, worn the only way it was meant to be — completely. High-fashion editorial. Concept sketch to runway.</p>
+    </div>
+    <div class="editorial__img">
+      <img src="assets/products/campaign-1.jpg" alt="ELUCITHERIX campaign" loading="lazy" />
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="foot__big">ELUCITHERIX</div>
+    <div class="foot__cols">
+      <div><span>STUDIO</span><a href="#">Hoften Studios</a><a href="#">WAX Material</a><a href="#">Stockists</a></div>
+      <div><span>CLIENT</span><a href="#">Shipping</a><a href="#">Returns</a><a href="#">Sizing</a></div>
+      <div><span>CONNECT</span><a href="#">Instagram</a><a href="#">Newsletter</a><a href="#">Contact</a></div>
+    </div>
+    <div class="foot__base">
+      <span>© 2026 ELUCITHERIX — A HOFTEN STUDIOS HOUSE</span>
+      <span>LET'S BUILD SOMETHING LEGENDARY.</span>
+    </div>
+  </footer>
+</main>
+
+<!-- ░░ PRODUCT QUICK VIEW ░░ -->
+<div class="pdp" id="pdp" aria-hidden="true">
+  <div class="pdp__scrim" data-close></div>
+  <div class="pdp__panel" role="dialog" aria-modal="true">
+    <button class="pdp__x" data-close aria-label="Close">CLOSE ✕</button>
+    <div class="pdp__media"><img id="pdpImg" src="" alt="" /></div>
+    <div class="pdp__info">
+      <p class="pdp__cat" id="pdpCat"></p>
+      <h3 id="pdpName"></h3>
+      <p class="pdp__price" id="pdpPrice"></p>
+      <p class="pdp__desc" id="pdpDesc"></p>
+      <p class="pdp__lbl">SIZE</p>
+      <div class="pdp__sizes" id="pdpSizes"></div>
+      <button class="pdp__add" id="pdpAdd">ADD TO CART</button>
+      <p class="pdp__meta">Exclusive WAX material · Debossed LOVE · Made by Hoften Studios</p>
+    </div>
+  </div>
+</div>
+
+<!-- ░░ CART ░░ -->
+<div class="cart" id="cart" aria-hidden="true">
+  <div class="cart__scrim" data-close></div>
+  <aside class="cart__panel" role="dialog" aria-modal="true" aria-label="Cart">
+    <div class="cart__top">
+      <span>YOUR BAG</span>
+      <button data-close aria-label="Close">✕</button>
+    </div>
+    <div class="cart__items" id="cartItems"></div>
+    <div class="cart__foot">
+      <div class="cart__row"><span>SUBTOTAL</span><span id="cartTotal">$0</span></div>
+      <p class="cart__note">Taxes & shipping calculated at checkout.</p>
+      <button class="cart__checkout" id="checkoutBtn" disabled>CHECKOUT</button>
+    </div>
+  </aside>
+</div>
+
+<!-- ░░ CHECKOUT ░░ -->
+<div class="co" id="co" aria-hidden="true">
+  <div class="co__scrim" data-close></div>
+  <div class="co__panel" role="dialog" aria-modal="true">
+    <button class="co__x" data-close aria-label="Close">CLOSE ✕</button>
+    <div class="co__grid">
+      <form class="co__form" id="coForm" novalidate>
+        <h3 class="co__h">CHECKOUT</h3>
+        <fieldset>
+          <legend>CONTACT</legend>
+          <input type="email" name="email" placeholder="EMAIL" required autocomplete="email" />
+        </fieldset>
+        <fieldset>
+          <legend>SHIPPING</legend>
+          <div class="co__two"><input name="first" placeholder="FIRST NAME" required /><input name="last" placeholder="LAST NAME" required /></div>
+          <input name="address" placeholder="ADDRESS" required autocomplete="street-address" />
+          <div class="co__two"><input name="city" placeholder="CITY" required /><input name="zip" placeholder="ZIP" required /></div>
+          <input name="country" placeholder="COUNTRY" value="UNITED STATES" required />
+        </fieldset>
+        <fieldset>
+          <legend>PAYMENT</legend>
+          <input name="card" placeholder="CARD NUMBER" inputmode="numeric" maxlength="19" required />
+          <div class="co__two"><input name="exp" placeholder="MM / YY" maxlength="7" required /><input name="cvc" placeholder="CVC" inputmode="numeric" maxlength="4" required /></div>
+          <p class="co__secure">◆ Demo checkout — no real charge is made. Wire to Stripe to go live.</p>
+        </fieldset>
+        <button type="submit" class="co__pay" id="coPay">PAY <span id="coPayAmt"></span></button>
+      </form>
+      <aside class="co__summary">
+        <h4>ORDER</h4>
+        <div id="coItems" class="co__items"></div>
+        <div class="co__line"><span>Subtotal</span><span id="coSub">$0</span></div>
+        <div class="co__line"><span>Shipping</span><span>$45</span></div>
+        <div class="co__line co__line--t"><span>Total</span><span id="coTot">$0</span></div>
+      </aside>
+    </div>
+  </div>
+</div>
+
+<!-- ░░ CONFIRMATION ░░ -->
+<div class="done" id="done" aria-hidden="true">
+  <div class="done__inner">
+    <svg class="done__heart" viewBox="0 0 32 32"><path d="M16 28.5C7 22 1.6 16.4 1.6 10.2 1.6 6.1 4.9 2.8 9 2.8c2.8 0 5.2 1.5 6.6 3.7l.4.6.4-.6c1.4-2.2 3.8-3.7 6.6-3.7 4.1 0 7.4 3.3 7.4 7.4 0 6.2-5.4 11.8-14.4 18.3z" fill="none" stroke="#e8e8e8" stroke-width="1"/></svg>
+    <h3>ORDER CONFIRMED</h3>
+    <p id="doneMsg"></p>
+    <p class="done__sub">A receipt is on its way. Welcome to the house.</p>
+    <button data-close class="done__btn">CONTINUE</button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

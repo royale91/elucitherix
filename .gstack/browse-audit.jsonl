@@ -1,0 +1,18 @@
+{"ts":"2026-06-15T06:05:16.799Z","cmd":"viewport","args":"1440x900","origin":"about:blank","durationMs":6,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-15T06:05:17.136Z","cmd":"goto","args":"http://localhost:8753/","origin":"http://localhost:8753/","durationMs":289,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-15T06:05:17.197Z","cmd":"js","args":"document.title","origin":"http://localhost:8753/","durationMs":3,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-15T06:05:17.234Z","cmd":"console","args":"--errors","origin":"http://localhost:8753/","durationMs":1,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-15T06:05:17.408Z","cmd":"screenshot","args":"--viewport /tmp/elx_top.png","origin":"http://localhost:8753/","durationMs":136,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-15T06:05:32.673Z","cmd":"js","args":"window.scrollTo(0, document.querySelector('#shop').offsetTop)","origin":"http://localhost:8753/","durationMs":2,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-15T06:05:33.284Z","cmd":"screenshot","args":"--viewport /tmp/elx_grid.png","origin":"http://localhost:8753/","durationMs":149,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-15T06:05:33.322Z","cmd":"js","args":"window.scrollTo(0, document.querySelector('#shop').offsetTop + 700)","origin":"http://localhost:8753/","durationMs":1,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-15T06:05:33.889Z","cmd":"screenshot","args":"--viewport /tmp/elx_grid2.png","origin":"http://localhost:8753/","durationMs":116,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-15T06:05:49.933Z","cmd":"js","args":"window.scrollTo(0,0)","origin":"http://localhost:8753/","durationMs":1,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-15T06:05:49.982Z","cmd":"js","args":"document.querySelector('[data-add=\"puffer-jacket\"]').click(); document.querySelector('[data-add=\"tank-top\"]').click(); 'added'","origin":"http://localhost:8753/","durationMs":5,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-15T06:05:50.959Z","cmd":"js","args":"document.querySelector('#cartCt').textContent","origin":"http://localhost:8753/","durationMs":1,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-15T06:05:51.031Z","cmd":"is","args":"visible #cart","origin":"http://localhost:8753/","durationMs":20,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-15T06:05:51.218Z","cmd":"screenshot","args":"--viewport /tmp/elx_cart.png","origin":"http://localhost:8753/","durationMs":147,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-15T06:05:51.362Z","cmd":"click","args":"#checkoutBtn","origin":"http://localhost:8753/","durationMs":106,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-15T06:05:51.713Z","cmd":"is","args":"visible #co","origin":"http://localhost:8753/","durationMs":1,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-15T06:05:51.751Z","cmd":"js","args":"document.querySelector('#coTot').textContent","origin":"http://localhost:8753/","durationMs":1,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-15T06:05:51.911Z","cmd":"screenshot","args":"--viewport /tmp/elx_checkout.png","origin":"http://localhost:8753/","durationMs":125,"status":"ok","hasCookies":false,"mode":"launched"}
