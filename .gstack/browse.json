@@ -1,9 +1,0 @@
-{
-  "pid": 24999,
-  "port": 25617,
-  "token": "7b439255-8ac5-4341-9487-16504ed6573e",
-  "startedAt": "2026-06-15T10:59:43.380Z",
-  "serverPath": "/Users/apple/.claude/skills/gstack/browse/src/server.ts",
-  "mode": "launched",
-  "configHash": "303a7eeccc03078b"
-}

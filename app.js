@@ -44,6 +44,10 @@ const PRODUCTS = [
     img:'assets/cutouts/glasses.png?v=1',
     sizes:['OS'],
     desc:'Slim oval frame with blacked-out lenses. The finishing accessory of the WAX lifestyle.' },
+  { id:'boots', name:'WAX LOVE Boots', cat:'footwear', price:1180,
+    img:'assets/cutouts/boots.png?v=1',
+    sizes:['39','40','41','42','43','44','45'],
+    desc:'Padded high-gloss WAX boots with debossed LOVE cuff and a heavy lugged sole. Sculptural rounded toe — the foundation of the head-to-toe WAX walk.' },
 ];
 
 const money = n => '$' + n.toLocaleString('en-US');
