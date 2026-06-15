@@ -251,3 +251,117 @@ button{font-family:inherit;cursor:pointer;color:inherit;background:none;border:n
 
 @keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* ░░░░░░░░░░ MINIMAL FLOATING OVERRIDE ░░░░░░░░░░ */
+/* kill atmosphere clutter — keep it dead simple & black */
+.grain,.vignette{display:none!important}
+
+/* nav: just wordmark + cart, no bar */
+.nav,.nav.scrolled{background:transparent!important;backdrop-filter:none!important;border:none!important;padding:24px var(--pad)!important}
+
+/* lede: tiny, centered, lots of air */
+.lede{margin-top:120px;text-align:center;padding:0 var(--pad) 90px}
+.lede p{font-size:clamp(30px,7vw,72px);font-weight:200;letter-spacing:.34em;padding-left:.34em;line-height:1}
+.lede span{display:block;margin-top:22px;font-size:11px;letter-spacing:.34em;color:var(--dim)}
+
+/* shop: airy, centered, no boxes */
+.shop{padding:0 clamp(20px,6vw,90px) 140px;max-width:1240px;margin:0 auto}
+.grid{display:grid!important;grid-template-columns:repeat(2,1fr);
+  gap:clamp(70px,9vw,150px) clamp(50px,7vw,120px);
+  background:transparent!important;border:none!important}
+@media(max-width:760px){.grid{grid-template-columns:1fr;gap:90px}}
+
+/* card: transparent, item floats in space */
+.card{background:transparent!important;padding:0!important;border:none!important;
+  display:flex;flex-direction:column;align-items:center;text-align:center;gap:0}
+.card::before{display:none!important}
+.card:hover{background:transparent!important}
+.card__no{display:none}
+.card__media{aspect-ratio:auto;min-height:clamp(280px,34vw,440px);margin-bottom:34px;width:100%}
+.card__media img{max-height:clamp(280px,34vw,440px);
+  filter:drop-shadow(0 40px 50px rgba(0,0,0,.85))!important}
+.card:hover .card__media img{transform:translateY(-10px) scale(1.04)}
+
+/* footer: one quiet line */
+.foot,.foot__base{border:none!important}
+.foot{padding:60px var(--pad);display:flex;justify-content:space-between;
+  font-size:10px;letter-spacing:.24em;color:var(--dimmer)}
+
+/* card text: bare name + price, no border */
+.card__foot{border:none!important;padding:0!important;flex-direction:column;gap:9px;align-items:center}
+.card__name{font-size:11px;letter-spacing:.2em;color:var(--ink)}
+.card__cat{display:none}
+.card__price{font-family:'Space Mono';font-size:12px;color:var(--dim)}
+
+/* quick-add: minimal underline that fades in */
+.card__add{position:static!important;opacity:0;transform:none!important;translate:none!important;
+  background:none!important;color:var(--dim)!important;padding:10px 0 0!important;border-radius:0!important;
+  font-size:9.5px;letter-spacing:.26em;border-bottom:1px solid transparent;
+  transition:opacity .35s,color .35s}
+.card:hover .card__add{opacity:1}
+.card__add:hover{color:var(--ink)!important}
+
+/* ░░░░░░░░░░ THEME TOGGLE (white / black) ░░░░░░░░░░ */
+:root{--shadow:rgba(0,0,0,.85)}
+body{transition:background .55s var(--ease),color .55s var(--ease)}
+body.light{
+  --bg:#f3f3f1;
+  --ink:#0a0a0a;
+  --dim:#6b6b6b;
+  --dimmer:#a6a6a6;
+  --line:#e2e2df;
+  --line2:#d2d2cf;
+  --shadow:rgba(0,0,0,.28);
+}
+.card__media img{filter:drop-shadow(0 40px 50px var(--shadow))!important;transition:transform .7s var(--ease),filter .55s var(--ease)}
+
+/* toggle pill */
+.theme-tog{justify-self:start;display:flex;align-items:center;gap:9px;
+  font-size:10px;letter-spacing:.24em;font-weight:600;color:var(--ink)}
+.theme-tog__dot{width:13px;height:13px;border-radius:50%;border:1px solid var(--ink);
+  background:var(--ink);transition:background .4s,border-color .4s}
+body.light .theme-tog__dot{background:transparent}
+.theme-tog:hover .theme-tog__dot{box-shadow:0 0 0 3px rgba(125,125,125,.25)}
+
+/* ░░░░░░░░░░ SPLASH (video intro + ENTER SHOP) ░░░░░░░░░░ */
+.splash{position:fixed;inset:0;z-index:100;background:#000;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+  opacity:1;transition:opacity .8s var(--ease)}
+.splash.hide{opacity:0;pointer-events:none}
+.splash__vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  filter:contrast(1.04) saturate(.96)}
+.splash__scrim{position:absolute;inset:0;
+  background:radial-gradient(120% 90% at 50% 50%,rgba(0,0,0,.15),rgba(0,0,0,.55) 100%)}
+.splash__enter{position:relative;z-index:2;
+  font-family:'Archivo',sans-serif;font-weight:500;
+  font-size:13px;letter-spacing:.42em;padding:20px 52px 20px 60px;color:#fff;
+  border:1px solid rgba(255,255,255,.55);background:rgba(0,0,0,.18);
+  backdrop-filter:blur(2px);cursor:pointer;
+  transition:.5s var(--ease);animation:enterPulse 3.2s var(--ease) infinite}
+.splash__enter:hover{background:#fff;color:#000;border-color:#fff;letter-spacing:.5em;
+  padding-left:64px;animation:none}
+@keyframes enterPulse{0%,100%{box-shadow:0 0 0 0 rgba(255,255,255,.0)}
+  50%{box-shadow:0 0 0 6px rgba(255,255,255,.06)}}
+body.splash-open{overflow:hidden}
+
+/* ░ splash mobile friendliness ░ */
+@media(max-width:680px){
+  .splash__enter{font-size:12px;letter-spacing:.34em;padding:17px 38px 17px 44px}
+  .splash__enter:hover,.splash__enter:active{letter-spacing:.4em;padding-left:48px}
+}
+@supports(height:100dvh){.splash{height:100dvh}}
+.splash__vid{pointer-events:none}
+
+/* ░ splash logo wordmark (no background) ░ */
+.splash__inner{position:relative;z-index:2;display:flex;flex-direction:column;
+  align-items:center;gap:clamp(30px,6vh,56px);padding:0 18px;max-width:96vw;text-align:center}
+.splash__logo{font-family:'Archivo',sans-serif;font-weight:200;color:#fff;
+  font-size:clamp(30px,8.5vw,118px);letter-spacing:.16em;line-height:1;
+  text-shadow:0 2px 40px rgba(0,0,0,.55);white-space:nowrap;
+  animation:logoIn 2.9s cubic-bezier(.22,1,.36,1) .3s both}
+@keyframes logoIn{
+  0%{opacity:0;filter:blur(16px);letter-spacing:.45em;transform:translateY(16px) scale(1.03)}
+  100%{opacity:1;filter:blur(0);letter-spacing:.16em;transform:none}}
+.splash__enter{animation:enterPulse 3.2s var(--ease) infinite,fadeSoft 1.6s ease 2.5s both}
+@keyframes fadeSoft{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media(max-width:560px){.splash__logo{letter-spacing:.1em;font-size:clamp(26px,9vw,60px)}}

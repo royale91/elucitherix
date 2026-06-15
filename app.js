@@ -63,8 +63,9 @@ function renderGrid(cat='all'){
 }
 renderGrid();
 
-/* ░ filters ░ */
-$('#filter').addEventListener('click',e=>{
+/* ░ filters (optional — only if present) ░ */
+const _filter=$('#filter');
+if(_filter) _filter.addEventListener('click',e=>{
   const b=e.target.closest('button'); if(!b)return;
   $$('#filter button').forEach(x=>x.classList.remove('is-on'));
   b.classList.add('is-on'); renderGrid(b.dataset.cat);
@@ -204,3 +205,31 @@ $('#coForm').addEventListener('submit',e=>{
 /* ░ nav scroll ░ */
 const nav=$('#nav');
 addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40),{passive:true});
+
+/* ░ theme toggle: white / black ░ */
+(function(){
+  const tog=$('#themeTog'), lbl=$('#themeLbl');
+  const apply=mode=>{
+    document.body.classList.toggle('light', mode==='light');
+    if(lbl) lbl.textContent = mode==='light' ? 'BLACK' : 'WHITE';
+  };
+  apply(localStorage.getItem('elx_theme')||'dark');
+  tog && tog.addEventListener('click',()=>{
+    const next=document.body.classList.contains('light')?'dark':'light';
+    localStorage.setItem('elx_theme',next); apply(next);
+  });
+})();
+
+/* ░ splash: video intro → ENTER SHOP → floating clothes ░ */
+(function(){
+  const splash=$('#splash'), enter=$('#enterShop'), vid=$('#splashVid');
+  if(!splash) return;
+  document.body.classList.add('splash-open');
+  function go(){
+    splash.classList.add('hide');
+    document.body.classList.remove('splash-open');
+    setTimeout(()=>{ splash.style.display='none'; if(vid){try{vid.pause()}catch(e){}} },820);
+    const shop=$('#shop'); if(shop) shop.scrollIntoView({behavior:'smooth'});
+  }
+  enter && enter.addEventListener('click',go);
+})();

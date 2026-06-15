@@ -8,10 +8,22 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@100;200;300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="styles.css?v=5" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 27C8 21 3 16 3 10.5 3 6.9 5.9 4 9.5 4c2.3 0 4.4 1.2 5.6 3 1.2-1.8 3.3-3 5.6-3C24.1 4 27 6.9 27 10.5 27 16 24 21 16 27z' fill='none' stroke='%23cfcfcf' stroke-width='1.6'/%3E%3C/svg%3E" />
 </head>
 <body>
+
+<!-- ░░ SPLASH (video + ENTER) ░░ -->
+<div class="splash" id="splash">
+  <video class="splash__vid" id="splashVid" autoplay muted loop playsinline preload="auto" poster="assets/hero/runway.jpg">
+    <source src="assets/hero/intro.mp4" type="video/mp4" />
+  </video>
+  <div class="splash__scrim" aria-hidden="true"></div>
+  <div class="splash__inner">
+    <div class="splash__logo">ELUCITHERIX</div>
+    <button class="splash__enter" id="enterShop">ENTER</button>
+  </div>
+</div>
 
 <!-- grain + vignette atmosphere -->
 <div class="grain" aria-hidden="true"></div>
@@ -20,7 +32,9 @@
 <!-- ░░ HEADER ░░ -->
 <header class="nav" id="nav">
   <div class="nav__l">
-    <button class="nav__menu" aria-label="Index">INDEX</button>
+    <button class="theme-tog" id="themeTog" aria-label="Toggle background">
+      <span class="theme-tog__dot"></span><span id="themeLbl">WHITE</span>
+    </button>
   </div>
   <a href="#top" class="wordmark" aria-label="Elucitherix">
     <svg class="heart" viewBox="0 0 32 32" aria-hidden="true">
@@ -46,64 +60,20 @@
 
 <main id="top">
 
-  <!-- ░░ MARQUEE ░░ -->
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee__track">
-      <span>EXCLUSIVE WAX MATERIAL</span><i>♡</i><span>NO ONE ELSE HAS ACCESS</span><i>♡</i><span>HOFTEN STUDIOS</span><i>♡</i><span>HEAD&nbsp;TO&nbsp;TOE</span><i>♡</i>
-      <span>EXCLUSIVE WAX MATERIAL</span><i>♡</i><span>NO ONE ELSE HAS ACCESS</span><i>♡</i><span>HOFTEN STUDIOS</span><i>♡</i><span>HEAD&nbsp;TO&nbsp;TOE</span><i>♡</i>
-    </div>
-  </div>
-
-  <!-- ░░ INTRO ░░ -->
-  <section class="intro">
-    <p class="intro__eyebrow">COLLECTION 001 — WAX</p>
-    <h1 class="intro__h">
-      <span>A FASHION HOUSE</span>
-      <span>BUILT ON A MATERIAL</span>
-      <span>NO ONE ELSE <em>CAN TOUCH.</em></span>
-    </h1>
-    <p class="intro__sub">Proprietary high-gloss WAX. Brutalist silhouettes. Debossed <em>LOVE</em>. Worn head-to-toe.</p>
-    <a href="#shop" class="intro__cta">ENTER THE COLLECTION →</a>
+  <!-- ░░ LEDE ░░ -->
+  <section class="lede">
+    <p>ELUCITHERIX</p>
+    <span>COLLECTION 001 — WAX</span>
   </section>
 
-  <!-- ░░ SHOP / DIRECTORY ░░ -->
+  <!-- ░░ FLOATING DIRECTORY ░░ -->
   <section class="shop" id="shop">
-    <div class="shop__head">
-      <h2>THE COLLECTION</h2>
-      <div class="shop__filter" id="filter">
-        <button data-cat="all" class="is-on">ALL</button>
-        <button data-cat="outerwear">OUTERWEAR</button>
-        <button data-cat="bottoms">BOTTOMS</button>
-        <button data-cat="tops">TOPS</button>
-        <button data-cat="accessories">ACCESSORIES</button>
-      </div>
-    </div>
     <div class="grid" id="grid"><!-- products injected --></div>
   </section>
 
-  <!-- ░░ EDITORIAL ░░ -->
-  <section class="editorial">
-    <div class="editorial__txt">
-      <p class="editorial__k">THE FACE</p>
-      <h3>NLE CHOPPA<br/>×<br/>ELUCITHERIX</h3>
-      <p>The full WAX collection, worn the only way it was meant to be — completely. High-fashion editorial. Concept sketch to runway.</p>
-    </div>
-    <div class="editorial__img">
-      <img src="assets/products/campaign-1.jpg" alt="ELUCITHERIX campaign" loading="lazy" />
-    </div>
-  </section>
-
   <footer class="foot">
-    <div class="foot__big">ELUCITHERIX</div>
-    <div class="foot__cols">
-      <div><span>STUDIO</span><a href="#">Hoften Studios</a><a href="#">WAX Material</a><a href="#">Stockists</a></div>
-      <div><span>CLIENT</span><a href="#">Shipping</a><a href="#">Returns</a><a href="#">Sizing</a></div>
-      <div><span>CONNECT</span><a href="#">Instagram</a><a href="#">Newsletter</a><a href="#">Contact</a></div>
-    </div>
-    <div class="foot__base">
-      <span>© 2026 ELUCITHERIX — A HOFTEN STUDIOS HOUSE</span>
-      <span>LET'S BUILD SOMETHING LEGENDARY.</span>
-    </div>
+    <span>© ELUCITHERIX 2026</span>
+    <span>HOFTEN STUDIOS</span>
   </footer>
 </main>
 
@@ -192,6 +162,6 @@
   </div>
 </div>
 
-<script src="app.js"></script>
+<script src="app.js?v=5"></script>
 </body>
 </html>
