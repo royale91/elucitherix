@@ -213,7 +213,7 @@ addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40),{passi
     document.body.classList.toggle('light', mode==='light');
     if(lbl) lbl.textContent = mode==='light' ? 'BLACK' : 'WHITE';
   };
-  apply(localStorage.getItem('elx_theme')||'dark');
+  apply(localStorage.getItem('elx_theme')||'light');
   tog && tog.addEventListener('click',()=>{
     const next=document.body.classList.contains('light')?'dark':'light';
     localStorage.setItem('elx_theme',next); apply(next);
