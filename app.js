@@ -36,6 +36,14 @@ const PRODUCTS = [
     img:'assets/cutouts/socks.png?v=2',
     sizes:['OS'],
     desc:'WAX crew socks with debossed LOVE. The foundation of a complete head-to-toe WAX look.' },
+  { id:'durag', name:'WAX Durag', cat:'accessories', price:565,
+    img:'assets/cutouts/durag.png?v=1',
+    sizes:['OS'],
+    desc:'High-gloss WAX durag with debossed LOVE band and long tails. Silky-lined, brutalist finish — head-to-toe WAX, crown to wave.' },
+  { id:'glasses', name:'WAX Oval Sunglasses', cat:'accessories', price:640,
+    img:'assets/cutouts/glasses.png?v=1',
+    sizes:['OS'],
+    desc:'Slim oval frame with blacked-out lenses. The finishing accessory of the WAX lifestyle.' },
 ];
 
 const money = n => '$' + n.toLocaleString('en-US');

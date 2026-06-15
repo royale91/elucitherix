@@ -129,3 +129,9 @@
 {"ts":"2026-06-15T11:29:03.515Z","cmd":"click","args":"#enterShop","origin":"http://localhost:8753/","durationMs":2114,"status":"ok","hasCookies":false,"mode":"launched"}
 {"ts":"2026-06-15T11:29:04.577Z","cmd":"js","args":"var c=[...document.querySelectorAll('.card')].find(x=>x.dataset.id==='boot-pants'); var img=c.querySelector('img'); var cr=c.querySelector('.card__media').getBoundingClientRect(), ir=img.getBoundingCl…","origin":"http://localhost:8753/","durationMs":2,"status":"ok","hasCookies":false,"mode":"launched"}
 {"ts":"2026-06-15T11:29:04.702Z","cmd":"screenshot","args":"[data-id=boot-pants] /tmp/elx_bootpants_card.png","origin":"http://localhost:8753/","durationMs":87,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-15T11:35:01.902Z","cmd":"viewport","args":"1440x900","origin":"http://localhost:8753/","durationMs":2,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-15T11:35:02.116Z","cmd":"goto","args":"http://localhost:8753/","origin":"http://localhost:8753/","durationMs":173,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-15T11:35:04.754Z","cmd":"click","args":"#enterShop","origin":"http://localhost:8753/","durationMs":2103,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-15T11:35:05.901Z","cmd":"screenshot","args":"[data-id=tank-top] /tmp/elx_tank_card.png","origin":"http://localhost:8753/","durationMs":85,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-15T11:35:05.938Z","cmd":"js","args":"[...document.querySelectorAll('.card')].find(x=>x.dataset.id==='tank-top').click(); 'opened'","origin":"http://localhost:8753/","durationMs":2,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-15T11:35:06.656Z","cmd":"screenshot","args":"#pdp .pdp__media /tmp/elx_tank_pdp.png","origin":"http://localhost:8753/","durationMs":76,"status":"ok","hasCookies":false,"mode":"launched"}
