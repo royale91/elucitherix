@@ -102,3 +102,13 @@
 {"ts":"2026-06-15T11:11:17.738Z","cmd":"js","args":"window.scrollTo(0,560)","origin":"http://localhost:8753/","durationMs":1,"status":"ok","hasCookies":false,"mode":"launched"}
 {"ts":"2026-06-15T11:11:18.182Z","cmd":"js","args":"document.body.classList.contains('light')+' bg='+getComputedStyle(document.body).backgroundColor","origin":"http://localhost:8753/","durationMs":1,"status":"ok","hasCookies":false,"mode":"launched"}
 {"ts":"2026-06-15T11:11:18.303Z","cmd":"screenshot","args":"--viewport /tmp/elx_white_real.png","origin":"http://localhost:8753/","durationMs":86,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-15T11:13:11.309Z","cmd":"viewport","args":"390x844","origin":"http://localhost:8753/","durationMs":10,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-15T11:13:11.388Z","cmd":"goto","args":"http://localhost:8753/","origin":"http://localhost:8753/","durationMs":40,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-15T11:13:12.645Z","cmd":"js","args":"var v=document.querySelector('#splashVid'); JSON.stringify({readyState:v.readyState, w:v.videoWidth, h:v.videoHeight, paused:v.paused, src:(v.currentSrc||'').split('/').pop()})","origin":"http://localhost:8753/","durationMs":2,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-15T11:13:12.679Z","cmd":"console","args":"--errors","origin":"http://localhost:8753/","durationMs":0,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-15T11:13:23.367Z","cmd":"viewport","args":"390x844","origin":"http://localhost:8753/","durationMs":0,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-15T11:13:23.416Z","cmd":"goto","args":"http://localhost:8753/","origin":"http://localhost:8753/","durationMs":11,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-15T11:13:25.539Z","cmd":"screenshot","args":"--viewport /tmp/elx_video_m.png","origin":"http://localhost:8753/","durationMs":80,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-15T11:13:25.577Z","cmd":"viewport","args":"1440x900","origin":"http://localhost:8753/","durationMs":4,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-15T11:13:25.627Z","cmd":"goto","args":"http://localhost:8753/","origin":"http://localhost:8753/","durationMs":10,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-15T11:13:27.896Z","cmd":"screenshot","args":"--viewport /tmp/elx_video_d.png","origin":"http://localhost:8753/","durationMs":223,"status":"ok","hasCookies":false,"mode":"launched"}
