@@ -365,3 +365,111 @@ body.splash-open{overflow:hidden}
 .splash__enter{animation:enterPulse 3.2s var(--ease) infinite,fadeSoft 1.6s ease 2.5s both}
 @keyframes fadeSoft{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 @media(max-width:560px){.splash__logo{letter-spacing:.1em;font-size:clamp(26px,9vw,60px)}}
+
+/* ░░░░░░░░░░ COMING SOON — tag + email capture ░░░░░░░░░░ */
+.splash__tag{color:rgba(255,255,255,.82);font-size:clamp(10px,1.4vw,12px);
+  letter-spacing:.42em;padding-left:.42em;font-weight:500;margin-top:-10px;
+  animation:fadeSoft 1.4s ease 1.1s both}
+
+.signup{display:flex;align-items:stretch;gap:0;width:min(420px,86vw);
+  border-bottom:1px solid rgba(255,255,255,.45);
+  transition:border-color .4s,opacity .5s,transform .5s var(--ease);
+  animation:fadeSoft 1.4s ease 1.8s both}
+.signup:focus-within{border-color:#fff}
+.signup.sent{opacity:0;transform:translateY(-6px);pointer-events:none;position:absolute}
+.signup__input{flex:1;background:transparent;border:none;color:#fff;
+  font-family:'Archivo',sans-serif;font-size:12px;letter-spacing:.18em;
+  padding:15px 4px 15px 0;outline:none}
+.signup__input::placeholder{color:rgba(255,255,255,.5);letter-spacing:.2em}
+.signup__btn{background:transparent;border:none;color:#fff;font-size:22px;line-height:1;
+  padding:0 6px 4px;cursor:pointer;transition:transform .35s var(--ease),opacity .3s}
+.signup__btn:hover{transform:translateX(5px)}
+.signup__btn:disabled{opacity:.4}
+
+.signup__msg{min-height:18px;font-size:11px;letter-spacing:.22em;font-weight:500;
+  color:rgba(255,255,255,.85);text-align:center;transition:opacity .4s}
+.signup__msg.ok{color:#fff}
+.signup__msg.err{color:#ff9a9a}
+.signup__msg.show-thanks{animation:fadeSoft .7s ease both}
+
+.splash__preview{margin-top:6px;font-size:10px;letter-spacing:.26em;font-weight:500;
+  color:rgba(255,255,255,.6);background:none;border:none;cursor:pointer;
+  padding:8px 4px;transition:color .35s,letter-spacing .35s var(--ease);
+  animation:fadeSoft 1.4s ease 2.3s both}
+.splash__preview:hover{color:#fff;letter-spacing:.32em}
+@media(max-width:560px){.splash__tag{letter-spacing:.32em}.signup__input{font-size:11px}}
+
+/* ░░░░░░░░░░ COMING SOON — modern stacked capture card ░░░░░░░░░░ */
+.splash__lead{color:rgba(255,255,255,.7);font-size:clamp(12px,1.5vw,14px);font-weight:300;
+  line-height:1.6;max-width:38ch;margin:-6px auto 4px;letter-spacing:.01em;
+  animation:fadeSoft 1.4s ease 1.4s both}
+
+/* override the old single-line signup → modern stacked card */
+.signup{display:flex;flex-direction:column;gap:10px;align-items:stretch;
+  width:min(380px,88vw);border:none!important;
+  background:rgba(12,12,14,.42);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border:1px solid rgba(255,255,255,.14)!important;border-radius:16px;
+  padding:18px;animation:fadeSoft 1.4s ease 1.9s both;
+  transition:opacity .5s,transform .5s var(--ease)}
+.signup.sent{opacity:0;transform:translateY(-8px) scale(.98);pointer-events:none;position:absolute}
+.signup__field{width:100%;background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.16);border-radius:10px;
+  color:#fff;font-family:'Archivo',sans-serif;font-size:12.5px;letter-spacing:.14em;
+  padding:14px 15px;outline:none;transition:border-color .35s,background .35s}
+.signup__field::placeholder{color:rgba(255,255,255,.45);letter-spacing:.16em}
+.signup__field:focus{border-color:rgba(255,255,255,.7);background:rgba(255,255,255,.1)}
+.signup__field:-webkit-autofill{-webkit-text-fill-color:#fff;-webkit-box-shadow:0 0 0 40px #1a1a1c inset}
+.signup__submit{width:100%;margin-top:4px;padding:15px;border-radius:10px;
+  background:#fff;color:#0a0a0a;font-size:11px;font-weight:700;letter-spacing:.22em;
+  cursor:pointer;transition:.4s var(--ease)}
+.signup__submit:hover{background:var(--chrome);letter-spacing:.28em}
+.signup__submit:disabled{opacity:.55;cursor:default;letter-spacing:.22em}
+
+.signup__msg{min-height:18px;font-size:11px;letter-spacing:.2em;font-weight:500;
+  color:rgba(255,255,255,.85);text-align:center;transition:opacity .4s}
+.signup__msg.ok{color:#fff}
+.signup__msg.err{color:#ff9a9a}
+.signup__msg.show-thanks{animation:fadeSoft .7s ease both}
+
+/* ░░░░░░░░░░ COMING SOON — match site (sharp, brutalist) ░░░░░░░░░░ */
+.signup{border-radius:0;background:rgba(10,10,10,.5);border:1px solid rgba(255,255,255,.16)!important;
+  padding:22px;gap:11px}
+.signup__field{border-radius:0;background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.18);text-transform:uppercase}
+.signup__field:focus{border-color:#fff;background:rgba(255,255,255,.09)}
+.signup__submit{border-radius:0;font-weight:600;letter-spacing:.24em;padding:16px}
+.signup__submit:hover{letter-spacing:.3em}
+/* clean square edges everywhere on the card */
+
+/* ░░░░░░░░░░ COMING SOON — POLISHED STEEL / CHROME LUXURY ░░░░░░░░░░ */
+.signup{
+  background:linear-gradient(180deg,rgba(28,28,30,.55),rgba(8,8,9,.6));
+  border:1px solid rgba(255,255,255,.10)!important;
+  box-shadow:0 1px 0 rgba(255,255,255,.18) inset, 0 30px 60px rgba(0,0,0,.55);
+  position:relative;overflow:hidden}
+/* brushed-steel hairline across the top */
+.signup::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.65),transparent)}
+.signup__field{
+  background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.02));
+  border:1px solid rgba(200,205,212,.22);
+  box-shadow:0 1px 0 rgba(255,255,255,.08) inset;
+  color:#eef0f2;letter-spacing:.16em}
+.signup__field::placeholder{color:rgba(206,210,216,.45)}
+.signup__field:focus{border-color:rgba(220,224,230,.85);
+  box-shadow:0 0 0 1px rgba(220,224,230,.35), 0 1px 0 rgba(255,255,255,.12) inset}
+/* the steel button — polished chrome with a moving sheen */
+.signup__submit{
+  position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.4);
+  color:#15171a;font-weight:700;text-shadow:0 1px 0 rgba(255,255,255,.4);
+  background:linear-gradient(180deg,#fafbfc 0%,#d3d7dc 42%,#a7adb5 52%,#cfd3d9 70%,#eef0f2 100%);
+  box-shadow:0 1px 0 rgba(255,255,255,.7) inset,0 -1px 0 rgba(0,0,0,.25) inset,0 10px 24px rgba(0,0,0,.4)}
+.signup__submit::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.85),transparent);
+  transform:skewX(-20deg);transition:left .6s var(--ease)}
+.signup__submit:hover{letter-spacing:.3em;
+  background:linear-gradient(180deg,#ffffff 0%,#dfe3e8 42%,#b6bcc4 52%,#dadee3 70%,#ffffff 100%)}
+.signup__submit:hover::after{left:130%}
+.signup__submit:active{box-shadow:0 1px 3px rgba(0,0,0,.5) inset}
+/* steel sheen on the tag + lead to tie it together */
+.splash__tag{background:linear-gradient(180deg,#fff,#aeb3ba);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}

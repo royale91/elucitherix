@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<title>ELUCITHERIX — Waitlist Admin</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@200;300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+:root{--bg:#0a0a0a;--ink:#ededed;--dim:#7c7c7c;--dimmer:#4a4a4a;--line:#1e1e1e;--line2:#2c2c2c;--ease:cubic-bezier(.16,1,.3,1)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:'Archivo',sans-serif;-webkit-font-smoothing:antialiased;min-height:100vh}
+::selection{background:var(--ink);color:var(--bg)}
+.wrap{max-width:1100px;margin:0 auto;padding:clamp(24px,5vw,64px)}
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:24px;margin-bottom:32px}
+.brand{display:flex;align-items:center;gap:10px}
+.brand svg{width:20px;height:20px}
+.brand span{font-weight:700;letter-spacing:.4em;padding-left:.4em;font-size:15px}
+.brand small{display:block;color:var(--dim);font-size:9px;letter-spacing:.3em;margin-top:4px}
+/* gate */
+.gate{max-width:360px;margin:14vh auto;text-align:center}
+.gate h1{font-weight:200;font-size:26px;letter-spacing:.06em;margin-bottom:6px}
+.gate p{color:var(--dim);font-size:12px;letter-spacing:.12em;margin-bottom:26px}
+.gate input{width:100%;background:rgba(255,255,255,.05);border:1px solid var(--line2);color:#fff;
+  font-family:inherit;font-size:13px;letter-spacing:.2em;text-align:center;padding:15px;margin-bottom:12px;outline:none}
+.gate input:focus{border-color:#fff}
+.steel{width:100%;padding:15px;border:1px solid rgba(255,255,255,.4);color:#15171a;font-weight:700;letter-spacing:.22em;font-size:11px;cursor:pointer;
+  background:linear-gradient(180deg,#fafbfc,#d3d7dc 42%,#a7adb5 52%,#cfd3d9 70%,#eef0f2);
+  box-shadow:0 1px 0 rgba(255,255,255,.7) inset,0 -1px 0 rgba(0,0,0,.25) inset;transition:.4s var(--ease)}
+.steel:hover{letter-spacing:.3em}
+.gate .err{color:#ff9a9a;font-size:11px;letter-spacing:.1em;min-height:16px;margin-top:10px}
+.hidden{display:none!important}
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-bottom:28px}
+.stat{background:var(--bg);padding:22px 24px}
+.stat b{font-family:'Space Mono';font-size:30px;font-weight:700;display:block}
+.stat span{font-size:10px;letter-spacing:.22em;color:var(--dim)}
+/* actions */
+.bar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px;align-items:center}
+.btn{font-size:10.5px;letter-spacing:.18em;font-weight:600;color:var(--ink);border:1px solid var(--line2);padding:11px 16px;cursor:pointer;background:none;transition:.3s}
+.btn:hover{border-color:var(--ink)}
+.btn--steel{border-color:rgba(255,255,255,.4);color:#15171a;background:linear-gradient(180deg,#fafbfc,#cfd3d9 55%,#eef0f2)}
+.search{flex:1;min-width:160px;background:rgba(255,255,255,.04);border:1px solid var(--line2);color:#fff;font-family:inherit;font-size:12px;letter-spacing:.1em;padding:11px 14px;outline:none}
+.search:focus{border-color:var(--dim)}
+.note{font-size:10.5px;color:var(--dimmer);letter-spacing:.08em;margin-bottom:18px;line-height:1.6}
+/* table */
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;font-size:10px;letter-spacing:.2em;color:var(--dim);font-weight:500;padding:0 14px 12px;border-bottom:1px solid var(--line2)}
+td{padding:14px;border-bottom:1px solid var(--line);letter-spacing:.02em}
+td.mono{font-family:'Space Mono';font-size:12px;color:var(--dim)}
+tr:hover td{background:#0e0e0e}
+.email{color:var(--ink)}
+.empty{text-align:center;color:var(--dimmer);padding:60px 0;letter-spacing:.16em;font-size:12px}
+a{color:inherit}
+</style>
+</head>
+<body>
+
+<!-- GATE -->
+<div class="gate" id="gate">
+  <svg viewBox="0 0 32 32" aria-hidden="true" style="width:42px;height:42px;margin:0 auto 20px;display:block">
+    <defs><linearGradient id="c" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset=".5" stop-color="#5a5a5a"/><stop offset="1" stop-color="#3a3a3a"/></linearGradient></defs>
+    <path d="M16 28.5C7 22 1.6 16.4 1.6 10.2 1.6 6.1 4.9 2.8 9 2.8c2.8 0 5.2 1.5 6.6 3.7l.4.6.4-.6c1.4-2.2 3.8-3.7 6.6-3.7 4.1 0 7.4 3.3 7.4 7.4 0 6.2-5.4 11.8-14.4 18.3z" fill="url(#c)" stroke="#e8e8e8" stroke-width=".5"/></svg>
+  <h1>ELUCITHERIX</h1>
+  <p>WAITLIST ADMIN</p>
+  <input id="pass" type="password" placeholder="PASSCODE" autocomplete="current-password" />
+  <button class="steel" id="unlock">UNLOCK</button>
+  <div class="err" id="gateErr"></div>
+</div>
+
+<!-- DASHBOARD -->
+<div class="wrap hidden" id="dash">
+  <div class="top">
+    <div class="brand">
+      <svg viewBox="0 0 32 32"><defs><linearGradient id="c2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset=".5" stop-color="#5a5a5a"/><stop offset="1" stop-color="#3a3a3a"/></linearGradient></defs>
+        <path d="M16 28.5C7 22 1.6 16.4 1.6 10.2 1.6 6.1 4.9 2.8 9 2.8c2.8 0 5.2 1.5 6.6 3.7l.4.6.4-.6c1.4-2.2 3.8-3.7 6.6-3.7 4.1 0 7.4 3.3 7.4 7.4 0 6.2-5.4 11.8-14.4 18.3z" fill="url(#c2)" stroke="#e8e8e8" stroke-width=".5"/></svg>
+      <div><span>ELUCITHERIX</span><small>WAITLIST ADMIN</small></div>
+    </div>
+    <button class="btn" id="refresh">↻ REFRESH</button>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><b id="stTotal">0</b><span>TOTAL SIGNUPS</span></div>
+    <div class="stat"><b id="stPhone">0</b><span>WITH PHONE</span></div>
+    <div class="stat"><b id="stToday">0</b><span>LAST 24H</span></div>
+  </div>
+
+  <div class="bar">
+    <input class="search" id="search" placeholder="SEARCH NAME / EMAIL / PHONE" />
+    <button class="btn" id="copyEmails">COPY ALL EMAILS</button>
+    <button class="btn" id="exportCsv">EXPORT CSV</button>
+    <button class="btn btn--steel" id="emailAll">✉ EMAIL EVERYONE (LAUNCH)</button>
+  </div>
+  <p class="note" id="src"></p>
+
+  <table>
+    <thead><tr><th>#</th><th>NAME</th><th>EMAIL</th><th>PHONE</th><th>JOINED</th></tr></thead>
+    <tbody id="rows"></tbody>
+  </table>
+  <div class="empty hidden" id="empty">NO SIGNUPS YET.</div>
+</div>
+
+<script src="config.js?v=1"></script>
+<script>
+const CFG = window.ELX_CONFIG || {};
+const $ = s => document.querySelector(s);
+let DATA = [];
+
+/* ░ gate ░ */
+function tryUnlock(){
+  const v = $('#pass').value;
+  if(v && v === (CFG.ADMIN_PASSCODE || 'wax2026')){
+    sessionStorage.setItem('elx_admin','1'); openDash();
+  } else { $('#gateErr').textContent='WRONG PASSCODE.'; }
+}
+$('#unlock').addEventListener('click', tryUnlock);
+$('#pass').addEventListener('keydown', e=>{ if(e.key==='Enter') tryUnlock(); });
+if(sessionStorage.getItem('elx_admin')==='1') openDash();
+
+function openDash(){ $('#gate').classList.add('hidden'); $('#dash').classList.remove('hidden'); load(); }
+
+/* ░ load data: Supabase if configured, else this browser's local copy ░ */
+async function load(){
+  let rows=[], source='';
+  if(CFG.SUPABASE_URL && CFG.SUPABASE_ANON_KEY){
+    try{
+      const r=await fetch(CFG.SUPABASE_URL.replace(/\/$/,'')+'/rest/v1/waitlist?select=*&order=created_at.desc',{
+        headers:{'apikey':CFG.SUPABASE_ANON_KEY,'Authorization':'Bearer '+CFG.SUPABASE_ANON_KEY}});
+      if(r.ok){ rows=await r.json(); source='Live from Supabase — every visitor’s signup.'; }
+      else throw 0;
+    }catch(_){ source='⚠ Could not reach Supabase — check your keys in config.js. Showing this browser’s local copy.'; }
+  }
+  if(!rows.length && !source.startsWith('Live')){
+    rows=(JSON.parse(localStorage.getItem('elx_waitlist')||'[]')).map(x=>({name:x.name,email:x.email,phone:x.phone,created_at:x.t}));
+    if(!source) source='No database connected yet (see config.js). Showing only signups made in THIS browser.';
+  }
+  DATA=rows; $('#src').textContent=source; render(DATA);
+}
+
+function render(rows){
+  const q=($('#search').value||'').toLowerCase();
+  const f=rows.filter(r=>!q || [r.name,r.email,r.phone].join(' ').toLowerCase().includes(q));
+  $('#stTotal').textContent=rows.length;
+  $('#stPhone').textContent=rows.filter(r=>r.phone&&r.phone.trim()).length;
+  const dayAgo=Date.now()-864e5;
+  $('#stToday').textContent=rows.filter(r=>r.created_at && new Date(r.created_at).getTime()>dayAgo).length;
+  const tb=$('#rows');
+  $('#empty').classList.toggle('hidden', f.length>0);
+  tb.innerHTML=f.map((r,i)=>`<tr>
+    <td class="mono">${String(i+1).padStart(3,'0')}</td>
+    <td>${esc(r.name)||'—'}</td>
+    <td class="email"><a href="mailto:${esc(r.email)}">${esc(r.email)||'—'}</a></td>
+    <td class="mono">${esc(r.phone)||'—'}</td>
+    <td class="mono">${r.created_at?new Date(r.created_at).toLocaleString():'—'}</td>
+  </tr>`).join('');
+}
+function esc(s){ return (s==null?'':String(s)).replace(/[<>&"]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c])); }
+
+$('#search').addEventListener('input',()=>render(DATA));
+$('#refresh').addEventListener('click',load);
+
+/* ░ actions ░ */
+$('#copyEmails').addEventListener('click',()=>{
+  const e=DATA.map(r=>r.email).filter(Boolean).join(', ');
+  navigator.clipboard.writeText(e).then(()=>{ $('#copyEmails').textContent='COPIED ✓'; setTimeout(()=>$('#copyEmails').textContent='COPY ALL EMAILS',1400); });
+});
+$('#exportCsv').addEventListener('click',()=>{
+  const head='name,email,phone,joined\n';
+  const body=DATA.map(r=>[r.name,r.email,r.phone,r.created_at].map(v=>'"'+String(v||'').replace(/"/g,'""')+'"').join(',')).join('\n');
+  const blob=new Blob([head+body],{type:'text/csv'});
+  const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='elucitherix-waitlist.csv'; a.click();
+});
+$('#emailAll').addEventListener('click',()=>{
+  const emails=DATA.map(r=>r.email).filter(Boolean);
+  if(!emails.length){ alert('No signups yet.'); return; }
+  const subject=encodeURIComponent('ELUCITHERIX — DROP 001 IS LIVE 🖤');
+  const body=encodeURIComponent("It's time.\n\nThe WAX collection is now live. You were first on the list — shop it before it's gone:\n\nhttps://royale91.github.io/elucitherix\n\n— ELUCITHERIX");
+  // BCC keeps the list private. Opens your mail client with everyone queued.
+  window.location.href=`mailto:?bcc=${encodeURIComponent(emails.join(','))}&subject=${subject}&body=${body}`;
+});
+</script>
+</body>
+</html>

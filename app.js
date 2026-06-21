@@ -262,3 +262,46 @@ addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40),{passi
   if(want && v.getAttribute('src')!==want){ v.setAttribute('src',want); v.load();
     const p=v.play&&v.play(); if(p&&p.catch)p.catch(()=>{}); }
 })();
+
+/* ░ coming-soon waitlist capture (Formspree + safe fallback) ░ */
+(function(){
+  const CFG = window.ELX_CONFIG || {};
+  const FORMSPREE_ID = CFG.FORMSPREE_ID || "YOUR_FORM_ID";
+  const form=$('#signup'), msg=$('#signupMsg'), btn=$('#signupBtn');
+  if(!form) return;
+  const setMsg=(t,cls)=>{ msg.textContent=t; msg.className='signup__msg show-thanks '+(cls||''); };
+  function celebrate(){
+    form.classList.add('sent');
+    setMsg("YOU'RE ON THE LIST 🖤  WATCH YOUR INBOX.", 'ok');
+  }
+  form.addEventListener('submit', async e=>{
+    e.preventDefault();
+    const name=$('#signupName').value.trim(), email=$('#signupEmail').value.trim(), phone=$('#signupPhone').value.trim();
+    if(!email || !email.includes('@')){ setMsg('ENTER A VALID EMAIL.', 'err'); return; }
+    if(!name){ setMsg('ADD YOUR NAME.', 'err'); return; }
+    btn.disabled=true; const label=btn.textContent; btn.textContent='SENDING…';
+    // always keep a local copy so a signup is never lost
+    try{ const k='elx_waitlist'; const l=JSON.parse(localStorage.getItem(k)||'[]');
+      l.push({name,email,phone,t:new Date().toISOString()}); localStorage.setItem(k,JSON.stringify(l)); }catch(_){}
+    // central DB: insert into Supabase if configured
+    if(CFG.SUPABASE_URL && CFG.SUPABASE_ANON_KEY){
+      try{
+        await fetch(CFG.SUPABASE_URL.replace(/\/$/,'')+'/rest/v1/waitlist',{
+          method:'POST',
+          headers:{'apikey':CFG.SUPABASE_ANON_KEY,'Authorization':'Bearer '+CFG.SUPABASE_ANON_KEY,
+                   'Content-Type':'application/json','Prefer':'return=minimal'},
+          body:JSON.stringify({name,email,phone})});
+      }catch(_){}
+    }
+    // optional email-on-signup via Formspree
+    try{
+      if(FORMSPREE_ID && FORMSPREE_ID!=="YOUR_FORM_ID"){
+        const r=await fetch('https://formspree.io/f/'+FORMSPREE_ID,{
+          method:'POST', headers:{'Accept':'application/json'}, body:new FormData(form)});
+        if(!r.ok) throw new Error('formspree');
+      }
+    }catch(_){}
+    celebrate();
+    btn.disabled=false; btn.textContent=label;
+  });
+})();
