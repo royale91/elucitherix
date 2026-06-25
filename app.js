@@ -305,3 +305,27 @@ addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40),{passi
     btn.disabled=false; btn.textContent=label;
   });
 })();
+
+/* ░ site password gate ░ */
+(function(){
+  const CFG=window.ELX_CONFIG||{};
+  const gate=$('#sitegate'), form=$('#sitegateForm'), inp=$('#sitePass'), err=$('#siteErr');
+  if(!gate||!form) return;
+  // if no passcode or already unlocked → make sure gate is gone
+  if(!CFG.SITE_PASSCODE || sessionStorage.getItem('elx_site')==='1'){
+    document.documentElement.classList.remove('locked'); return;
+  }
+  setTimeout(()=>{ try{ inp.focus(); }catch(_){} },100);
+  form.addEventListener('submit',e=>{
+    e.preventDefault();
+    if((inp.value||'').trim().toLowerCase()===String(CFG.SITE_PASSCODE).toLowerCase()){
+      sessionStorage.setItem('elx_site','1');
+      gate.classList.add('out');
+      document.documentElement.classList.remove('locked');
+      setTimeout(()=>{ gate.style.display='none'; },720);
+    }else{
+      err.textContent='WRONG PASSWORD.'; err.className='signup__msg err show-thanks';
+      inp.value=''; inp.focus();
+    }
+  });
+})();
