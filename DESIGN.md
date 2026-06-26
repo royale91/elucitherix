@@ -121,3 +121,14 @@ Few words. Confident, cold, exclusive. "EXCLUSIVE WAX MATERIAL." "DROP 001 · CO
 
 *Live reference: the website (`index.html` / `styles.css`) is the canonical implementation
 of tokens 3, 4, 7, 8. When in doubt, match the site.*
+
+---
+
+## 11. Creative Direction — v2 (locked 2026-06-26)
+
+**"Chrome hearts for the new age."** Original gothic chrome-heart genre — NOT the Chrome Hearts® brand. Avant-garde, not generic.
+
+- **Format:** RUNWAY / editorial, not flat catalog shots. Cinematic, dramatic, on-model or sculptural — like a Rick Owens / Balenciaga show.
+- **Concept over catalog:** bags and pieces should be sculptural and unmistakably us (e.g., the chrome thorn-cage bag, melted-heart bag, harness bags). If a shape could belong to any brand, it's wrong.
+- **Range:** full house — women's → men's → jackets → accessories → bags. Unisex core, biker dark theme throughout.
+- **Material/marks unchanged:** all-black WAX, chrome/silver thorn + heart hardware, EX monogram, debossed LOVE.
